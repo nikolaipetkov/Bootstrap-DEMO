@@ -209,3 +209,14 @@ document.addEventListener("dragend", function(event) {
     event.target.style.opacity = "1";
   }
 });
+
+
+
+
+
+$('#droppable').each(function() {
+    if ($(this).find('img').length == 0) {
+        // there is an image in this div, do something...
+        document.getElementById("drop-article").innerHTML = "";
+    }
+});
