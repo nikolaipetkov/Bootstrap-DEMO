@@ -1,0 +1,244 @@
+<style>
+
+
+
+
+
+/* Ask Yulian about this********************************************************
+Ako tuk ne dobavq nqkakuv class a ostavq container-fluid kato purvi element ne se vzima predvid?
+vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavqm paddingi top i bottom .. overridevam neshto?
+*/
+.wrong {
+
+}
+
+
+
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+.navbar-nav li a:hover {
+    color: #1abc9c !important;
+}
+
+.navbar-brand > img {
+  height: 50px;
+  margin-left: -20px;
+  margin-top: -15px;
+}
+
+
+
+
+.container-fluid {
+	padding-bottom: 170px;
+	padding-top: 170px;
+}
+
+/* PAGE 1 STYLES   */
+
+#info {
+  /*background-image: url("whatBG.jpg"); */
+  background-image: url("assets/indexBG.jpg");
+  background-size: 100% 100%;
+  height: 900px;
+  color: white;
+}
+
+#header1-page1 {
+  margin-left: -90px;
+}
+
+
+
+#droppable, .draggable {
+    margin-left: 350px;
+    width: 300px;
+    height: 160px;
+    padding-top: 12px;
+    border: 1px solid #aaaaaa;
+    
+}
+
+.draggable {
+  margin-left: 50px;
+  margin-top: 15px;
+
+}
+
+
+#drop-article {
+  text-align: center;
+  margin-left: 10px;
+}
+
+
+/* END PAGE 1 STYLES ------------------------------------------------ */
+
+
+
+
+
+/* PAGE 2 STYLES         */
+
+#match {
+  background-image: url("assets/whoBG.jpg");
+  height: 900px;  
+}
+
+.thumbnail {
+	padding:0;
+}
+
+#progress-bar1 {
+
+  -webkit-transition: width 5.0s ease !important;
+     -moz-transition: width 5.0s ease !important;
+       -o-transition: width 5.0s ease !important;
+          transition: width 5.0s ease !important;
+}
+
+
+#arrow1, #arrow2 {
+    display: none;
+    color: green;
+  }
+
+
+
+.article-img {
+  width: 85%;
+  height: 300px;
+  border-radius: 12px;
+}
+
+#myCarousel h3, #myCarousel p {
+  color: black;
+}
+
+/*
+#myCarousel img {
+  opacity: 0.5;
+}
+
+#myCarousel img:hover {
+  opacity: 1.0;
+}
+*/
+
+/*
+#squad-pic {
+  height: 70%;
+}
+*/
+
+
+.carousel-caption {
+  background: rgba(255, 255, 255, .7);
+}
+
+
+
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+
+  .carousel-inner > .item > img{
+       
+       height:528px;
+     }
+
+
+
+/* END PAGE 2 STYLES -------------------------------------------- */
+
+
+
+
+
+
+/* PAGE 3 STYLES                                                  */
+
+
+#goalscorers {
+  background-image: url("assets/bg-11-full.jpg");
+  height: 900px;
+  
+}
+
+.grayscale {
+    -webkit-filter: grayscale(100%);
+        -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+
+}
+ 
+.grayscale:hover {
+    -webkit-filter: grayscale(0%);
+
+}
+
+.brighten img {
+  -webkit-filter: brightness(65%);
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+ 
+.brighten img:hover {
+  -webkit-filter: brightness(135%);
+}
+
+.blur img {
+    -webkit-filter: blur(3px);
+  filter: blur(3px);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.blur img:hover {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}
+
+
+
+/* END PAGE 3 STYLES --------------------------------------------- */
+
+
+
+/* FOOTER STYLES                                                   */
+
+footer {
+  background-image: url("assets/footerBG.jpg");
+  background-size: 100% 100%;
+}
+
+
+
+
+
+.footer-info {
+  margin-top: -10px;
+  color: white;
+}
+
+
+/* END FOOTER STYLE ----------------------------------------------- */
+
+</style>
