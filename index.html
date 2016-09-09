@@ -45,16 +45,16 @@
 
   <div class="col-sm-4">
     <h3 id="header1-page1"> Choose a player from here </h3>
-      <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <img src="assets/messi.jpg" ondragstart="drag(event)" id="drag1" class="img-rounded"  alt="Messi" height="130" width="280">
+      <div class="draggable" id="draggable1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="assets/messi.jpg" ondragstart="drag(event)" id="drag1" class="img-rounded"  alt="Messi">
       </div>
 
-        <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)">
-          <img src="assets/suarez1.jpg" ondragstart="drag(event)" id="drag2" class="img-rounded"  alt="Messi" height="130" width="280">
+        <div class="draggable" id="draggable2" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="assets/suarez1.jpg" ondragstart="drag(event)" id="drag2" class="img-rounded"  alt="Suarez">
        </div>
 
-       <div class="draggable" ondrop="drop(event)" ondragover="allowDrop(event)">
-          <img src="assets/neymar.jpg" ondragstart="drag(event)" id="drag3" class="img-rounded"  alt="Messi" height="130" width="280">
+       <div class="draggable" id="draggable3" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="assets/neymar.jpg" ondragstart="drag(event)" id="drag3" class="img-rounded"  alt="Neymar">
        </div>
   </div>
 
@@ -64,7 +64,23 @@
     <div id="droppable" ondrop="drop(event)" ondragover="allowDrop(event)"> 
     </div>
 
-    <p id="drop-article"></p>
+
+    <p id="drop-article" style="display: none"></p>
+
+
+    <div id="iframe-div">
+      <h3 id="iframe1-title"> Lionel Messi's Top 10 Goals </h3>
+      <iframe id="iframe1" src="https://www.youtube.com/embed/LgiUjyoAo3k">
+      </iframe>
+
+      <h3 id="iframe2-title"> Luis Suarez's Top 10 Goals </h3>
+      <iframe id="iframe2" src="https://www.youtube.com/embed/9HgioQfd9i0">
+      </iframe> 
+
+      <h3 id="iframe3-title"> Neymar Jr's Top 10 Goals </h3>
+      <iframe id="iframe3" src="https://www.youtube.com/embed/xWLoAU-zwgY">
+      </iframe>
+    </div>
 </div>
 
 </div>
@@ -75,7 +91,7 @@
 
         <div class="col-sm-4">
           <div class="thumbnail">
-            <img id="squad-pic" src="assets/squadPic.jpg" style="width: 100%">
+            <img id="squad-pic" src="assets/squadPic.jpg">
               <div class="caption">
                 <h4>FC Barcelona</h4>
 
@@ -106,7 +122,7 @@
 
 
     <div  class="col-sm-8">
-<div id="myCarousel" class="hidden" class="carousel" data-ride="carousel" class="col-sm-8">
+<div id="myCarousel" class="carousel" data-ride="carousel" class="col-sm-8" style="display:none">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -168,7 +184,7 @@
 
     <div class="col-sm-4">
     <div class="grayscale">
-      <img class="article-img" src="assets/suarez.jpg" class="img-responsive" alt="Suarez">
+      <img class="article-img" id="scorer-image1" src="assets/suarez.jpg" class="img-responsive" alt="Luis Suarez">
     </div>
       <p></p>
       <table style="width:100%">
@@ -206,9 +222,10 @@
       <hr>
    </div>
 
+
     <div class="col-sm-4">
     <div class="brighten">
-      <img class="article-img" src="assets/messi.jpg" class="img-responsive" alt="Messi">
+      <img class="article-img" id="scorer-image2" src="assets/messi.jpg" class="img-responsive" alt="Lionel Messi">
     </div>
       <p></p>
       <table style="width:100%">
@@ -248,7 +265,7 @@
 
     <div class="col-sm-4">
     <div class="blur">
-      <img class="article-img" src="assets/neymar.jpg" class="img-responsive" alt="Neymar">
+      <img class="article-img" id="scorer-image3" src="assets/neymar.jpg" class="img-responsive" alt="Neymar Jr.">
     </div>
       <p></p>    
       <table style="width:100%">
@@ -285,6 +302,17 @@
         </table>
       <hr>
    </div>
+
+      <!-- The Modal -->
+<div id="myModal" class="modal">
+  <span id="close">×</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+
+
+
 
 
 
