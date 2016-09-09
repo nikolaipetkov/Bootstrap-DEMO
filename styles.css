@@ -2,15 +2,7 @@
 
 
 
-
-
-/* Ask Yulian about this********************************************************
-Ako tuk ne dobavq nqkakuv class a ostavq container-fluid kato purvi element ne se vzima predvid?
-vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavqm paddingi top i bottom .. overridevam neshto?
-*/
-
-
-
+/* NAVIGATION STYLES */
 .navbar {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -42,7 +34,6 @@ vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavq
 /* PAGE 1 STYLES   */
 
 #info {
-  /*background-image: url("whatBG.jpg"); */
   background-image: url("assets/indexBG.jpg");
   background-size: 100% 100%;
   height: 1100px;
@@ -92,7 +83,10 @@ vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavq
 #drop-article {
   text-align: center;
   margin-left: -200px;
+  display: none;
 }
+
+
 
 #iframe-div {
   margin-top: 50px;
@@ -140,6 +134,7 @@ vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavq
 
 /* PAGE 2 STYLES         */
 
+/* MATCH CARD STYLES */
 #match {
   background-image: url("assets/whoBG.jpg");
   height: 1100px;  
@@ -151,20 +146,33 @@ vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavq
 
 #progress-bar1 {
 
+  width: 65%;
   -webkit-transition: width 5.0s ease !important;
      -moz-transition: width 5.0s ease !important;
        -o-transition: width 5.0s ease !important;
           transition: width 5.0s ease !important;
 }
 
+#squad-pic {
+  width: 100%;
+}
+
+.card-info {
+  float: left;
+}
 
 #arrow1, #arrow2 {
     display: none;
     color: green;
+    float: right;
   }
 
+.percents {
+  float: right;
+}
 
 
+/* CAROUSEL STYLES */
 .article-img {
   width: 85%;
   height: 300px;
@@ -175,21 +183,9 @@ vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavq
   color: black;
 }
 
-/*
-#myCarousel img {
-  opacity: 0.5;
+#myCarousel {
+  display: none;
 }
-
-#myCarousel img:hover {
-  opacity: 1.0;
-}
-*/
-
-
-#squad-pic {
-  width: 100%;
-}
-
 
 
 .carousel-caption {
@@ -198,13 +194,13 @@ vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavq
 
 
 
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
       width: 70%;
       margin: auto;
   }
 
-  .carousel-inner > .item > img{
+.carousel-inner > .item > img{
        
        height:588px;
      }
@@ -220,6 +216,10 @@ vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavq
 
 /* PAGE 3 STYLES                                                  */
 
+/* GOALSCORERS STYLES */
+.tables {
+  width: 100%;
+}
 
 #goalscorers {
   background-image: url("assets/bg-11-full.jpg");
@@ -252,9 +252,11 @@ vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavq
           transition: all 1s ease;
 }
  
+
 .brighten img:hover {
   -webkit-filter: brightness(135%);
 }
+
 
 .blur img {
     -webkit-filter: blur(3px);
@@ -262,6 +264,7 @@ vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavq
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
 }
+
 
 .blur img:hover {
   -webkit-filter: blur(0);

@@ -11,16 +11,6 @@
 </head>
 
  
-<!-- Questions:
-1. About the first class in the styles.css
-2. About the javascript function that should remove text below droppable
-3. About general javascript functions
--->
-
-
-
-
-
 <body>
 
 <!-- NAVBAR           -->
@@ -43,6 +33,7 @@
 <!--   PAGE 1          -->
 <div id="info" class="container-fluid text-center">
 
+<!--Drag Players Section -->
   <div class="col-sm-4">
     <h3 id="header1-page1"> Choose a player from here </h3>
       <div class="draggable" id="draggable1" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -59,13 +50,15 @@
   </div>
 
 
+<!-- Drop Players Section -->
 <div class="col-sm-8">
   <h3 id="header2-page1"> Drop the player here </h3>
     <div id="droppable" ondrop="drop(event)" ondragover="allowDrop(event)"> 
     </div>
 
 
-    <p id="drop-article" style="display: none"></p>
+    <p id="drop-article"></p>
+
 
 
     <div id="iframe-div">
@@ -89,6 +82,7 @@
 <!--   PAGE 2          -->
 <div id="match" class="container-fluid text-center">
 
+<!-- Match Card -->
         <div class="col-sm-4">
           <div class="thumbnail">
             <img id="squad-pic" src="assets/squadPic.jpg">
@@ -97,77 +91,82 @@
 
                   <div class="progress progress-striped">
                      <div id="progress-bar1" class="progress-bar progress-bar-success active" role="progressbar"
-                      aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
+                      aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
                       65%
                     </div>
                   </div>
 
-                <span style="float:left">Players Fitness </span>
-                <span id="arrow1" style="float:right" class="glyphicon glyphicon-arrow-up"></span>
-                <span class="percents" id="fitness-percents" style="float:right">65% </span> 
+                <span class="card-info">Players Fitness </span>
+                <span id="arrow1" class="glyphicon glyphicon-arrow-up"></span>
+                <span class="percents" id="fitness-percents">65% </span> 
                 <br>
                 <hr>
-                <span style="float:left">Match Sharpness </span>
-                <span id="arrow2" style="float:right"  class="glyphicon glyphicon-arrow-up"></span>
-                <span class="percents" id="sharpness-percents" style="float:right">65% </span>
+
+                <span class="card-info">Match Sharpness </span>
+                <span id="arrow2" class="glyphicon glyphicon-arrow-up"></span>
+                <span class="percents" id="sharpness-percents">65% </span>
                 <br>
                 <hr>
-               <button id="train1" type="button" class="btn btn-success">Train</button>
+
                
+               <button id="train1" type="button" class="btn btn-success">Train</button>               
                <button id="train2" type="button" class="btn btn-success" disabled>Final Preparation</button>
-                <button id="show-article" type="button" class="btn btn-info" disabled>Start Match</button>
+               <button id="show-article" type="button" class="btn btn-info" disabled>Start Match</button>
             </div>
           </div>
         </div>
 
 
+<!-- Carousel Section -->
     <div  class="col-sm-8">
-<div id="myCarousel" class="carousel" data-ride="carousel" class="col-sm-8" style="display:none">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
+      <div id="myCarousel" class="carousel" data-ride="carousel" class="col-sm-8">
+         <!-- Indicators -->
+          <ol class="carousel-indicators">
+           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+           <li data-target="#myCarousel" data-slide-to="1"></li>
+           <li data-target="#myCarousel" data-slide-to="2"></li>
     
-  </ol>
+         </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <img class="img-responsive center-block" src="assets/final1.jpg" alt="Final1">
-      <div class="carousel-caption">
-        <h3>Peak of the Season</h3>
-        <p>Champions League Final</p>
-      </div>
+        <div class="carousel-caption">
+          <h3>Peak of the Season</h3>
+          <p>Champions League Final</p>
+        </div>
     </div>
 
     <div class="item">
       <img class="img-responsive center-block" src="assets/final2.jpg" alt="Final2">
-      <div class="carousel-caption">
-        <h3>Match Highlight</h3>
-        <p>Suarez scores to make it 2:1</p>
-      </div>
+        <div class="carousel-caption">
+          <h3>Match Highlight</h3>
+          <p>Suarez scores to make it 2:1</p>
+        </div>
     </div>
 
     <div class="item">
       <img class="img-responsive center-block" src="assets/final3.jpg" alt="Final3">
-      <div class="carousel-caption">
-        <h3>Celebrations</h3>
-        <p>Barcelona 3:1 Juventus</p>
-      </div>
+        <div class="carousel-caption">
+          <h3>Celebrations</h3>
+          <p>Barcelona 3:1 Juventus</p>
+        </div>
     </div>
 
 
 
   <!-- Left and right controls -->
-    <a class="left carousel-control" href="#what" role="button">
+    <a class="left carousel-control" role="button">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="right carousel-control" href="#what" role="button">
+
+    <a class="right carousel-control" role="button">
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+
 </div>
     </div>
   </div>
@@ -179,15 +178,16 @@
 <!--   PAGE 3          -->
 <div id="goalscorers" class="container-fluid text-center"> 
   <br>
-  <h3> FC Barcelona 2015-2016 Top Goalscorers</h3>
-  <div class="row">
+    <h3> FC Barcelona 2015-2016 Top Goalscorers</h3>
+      <div class="row">
 
+<!--Goalscorer 1 Section -->
     <div class="col-sm-4">
-    <div class="grayscale">
-      <img class="article-img" id="scorer-image1" src="assets/suarez.jpg" class="img-responsive" alt="Luis Suarez">
-    </div>
+      <div class="grayscale">
+        <img class="article-img" id="scorer-image1" src="assets/suarez.jpg" class="img-responsive" alt="Luis Suarez">
+      </div>
       <p></p>
-      <table style="width:100%">
+      <table class="tables">
       <tr>
         <th class="text-center"> Tournament </th>
         <th class="text-center"> Goals </th>
@@ -223,12 +223,13 @@
    </div>
 
 
+<!-- Goalscorer 2 Section -->
     <div class="col-sm-4">
     <div class="brighten">
       <img class="article-img" id="scorer-image2" src="assets/messi.jpg" class="img-responsive" alt="Lionel Messi">
     </div>
       <p></p>
-      <table style="width:100%">
+      <table class="tables">
       <tr>
         <th class="text-center"> Tournament </th>
         <th class="text-center"> Goals </th>
@@ -263,12 +264,14 @@
       <hr>
    </div>
 
+
+<!-- Goalscorer 3 Section -->
     <div class="col-sm-4">
     <div class="blur">
       <img class="article-img" id="scorer-image3" src="assets/neymar.jpg" class="img-responsive" alt="Neymar Jr.">
     </div>
       <p></p>    
-      <table style="width:100%">
+      <table class="tables">
       <tr>
         <th class="text-center"> Tournament </th>
         <th class="text-center"> Goals </th>
@@ -323,6 +326,7 @@
 
 </div>
 
+<!-- Footer -->
 <footer class="container-fluid text-center">
   <p class="footer-info">Trainee: Nikolay Petkov</p> 
   <p class="footer-info">Year: 2016 </p>
@@ -331,8 +335,6 @@
 
 
 <script src="script.js">
-
-
 </script>
 
 </body>

@@ -1,3 +1,5 @@
+//SCROLL SPY FUNCTIONALITY
+
 
 //Scroll Spy function - just used
 $(document).ready(function(){
@@ -30,7 +32,9 @@ $(document).ready(function(){
 
 
 
-//Function: Disables hidden class (Shows article)
+
+
+//Function: Shows article 
 function showArticle() {
    $("#myCarousel").fadeIn(2000);
 }
@@ -96,8 +100,8 @@ function changePercentsSpans() {
 
 //Function: Shows the green improvement Arrows
 function showArrows() {
-  $( "#arrow1" ).css('display', 'block');
-  $( "#arrow2" ).css('display', 'block');
+   $("#arrow1").fadeIn(2000);
+   $("#arrow2").fadeIn(2000);     
 }
 
 //Function: Enabling Start Match button
@@ -178,6 +182,7 @@ function drop(ev) {
 
 
 //Event Handler: Drag End when Droppable div is Target
+//Executes when Drag elements are dropped on the Droppable div
 var $divDroppable = document.getElementById("droppable");
 $divDroppable.addEventListener("dragend", function(event) {
 
@@ -185,7 +190,6 @@ $divDroppable.addEventListener("dragend", function(event) {
 
   if (id == "drag1") {
     event.dataTransfer.setData("Text", event.target.id);
-    $("#drop-article").fadeIn(1400);
     document.getElementById("drop-article").innerHTML = "Name: Lionel Messi <br> Born: 1987";
     event.target.style.opacity = "1";
     $("#droppable").css("border", "1px solid #aaaaaa")
@@ -196,7 +200,7 @@ $divDroppable.addEventListener("dragend", function(event) {
     event.dataTransfer.setData("Text", event.target.id);
     document.getElementById("drop-article").innerHTML = "Name: Luis Suarez <br> Born: 1987";
     event.target.style.opacity = "1";
-    $("#drop-article").delay(1500).fadeIn(400);
+    $("#drop-article").fadeIn(400);
     $("#droppable").css("border", "1px solid #aaaaaa")
     $("#iframe2").fadeIn(1500);
     $("#iframe2-title").fadeIn(1500);
@@ -213,6 +217,7 @@ $divDroppable.addEventListener("dragend", function(event) {
 
 
 //Event Handler: Drag End when Draggable divs are Target
+//Executes when Dragged Elements are dropped on Drag Divs
 var $divDraggable1 = document.getElementById("draggable1");
 $divDraggable1.addEventListener("dragend", function(event) {
   event.target.style.opacity = "1";
@@ -241,17 +246,10 @@ $divDraggable3.addEventListener("dragend", function(event) {
 });
 
 
-/*
-
-document.addEventListener("dragstart", function(event) {
-    event.target.style.opacity = "0.4";
-    document.getElementById("drop-article").innerHTML = "Please drop the selected element in the above container";
-    $("#drop-article").fadeOut(200);
-});
-*/
 
 
 //Event Handler: Drag Start
+//Executes when the Drag Starts for both divs
 $divDraggable1.addEventListener("dragstart", function(event) {
     event.target.style.opacity = "0.4";
     document.getElementById("drop-article").innerHTML = "Please drop the selected element in the above container";
