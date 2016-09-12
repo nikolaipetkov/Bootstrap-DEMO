@@ -1,3 +1,5 @@
+//SCROLL SPY FUNCTIONALITY
+
 
 //Scroll Spy function - just used
 $(document).ready(function(){
@@ -30,9 +32,11 @@ $(document).ready(function(){
 
 
 
-//Function: Disables hidden class (Shows article)
+
+
+//Function: Shows article 
 function showArticle() {
-   $("#myCarousel").removeClass('hidden');
+   $("#myCarousel").fadeIn(2000);
 }
 
 
@@ -96,8 +100,8 @@ function changePercentsSpans() {
 
 //Function: Shows the green improvement Arrows
 function showArrows() {
-  $( "#arrow1" ).css('display', 'block');
-  $( "#arrow2" ).css('display', 'block');
+   $("#arrow1").fadeIn(2000);
+   $("#arrow2").fadeIn(2000);     
 }
 
 //Function: Enabling Start Match button
@@ -156,9 +160,6 @@ document.getElementById('train2').onclick = function() {
 
 
 
-$( "#show-arrows" ).click(function() {
-  showArrows();
-});
 
 
 
@@ -180,18 +181,10 @@ function drop(ev) {
 
 
 
-//Event Handler: Drag Start
-document.addEventListener("dragstart", function(event) {
-    event.target.style.opacity = "0.4";
-    document.getElementById("drop-article").innerHTML = "Please drop the selected element in the above container";
-
-});
-
-
-
-
-//Event Handler: Drag End
-document.addEventListener("dragend", function(event) {
+//Event Handler: Drag End when Droppable div is Target
+//Executes when Drag elements are dropped on the Droppable div
+var $divDroppable = document.getElementById("droppable");
+$divDroppable.addEventListener("dragend", function(event) {
 
   var id = event.target.id;
 
@@ -199,13 +192,147 @@ document.addEventListener("dragend", function(event) {
     event.dataTransfer.setData("Text", event.target.id);
     document.getElementById("drop-article").innerHTML = "Name: Lionel Messi <br> Born: 1987";
     event.target.style.opacity = "1";
+    $("#droppable").css("border", "1px solid #aaaaaa")
+    $("#iframe1").fadeIn(1500);
+    $("#iframe1-title").fadeIn(1500);
+    
   } else if (id == "drag2") {
     event.dataTransfer.setData("Text", event.target.id);
     document.getElementById("drop-article").innerHTML = "Name: Luis Suarez <br> Born: 1987";
     event.target.style.opacity = "1";
-  } else {
+    $("#drop-article").fadeIn(400);
+    $("#droppable").css("border", "1px solid #aaaaaa")
+    $("#iframe2").fadeIn(1500);
+    $("#iframe2-title").fadeIn(1500);
+  } else if (id =="drag3") {
     event.dataTransfer.setData("Text", event.target.id);
     document.getElementById("drop-article").innerHTML = "Name: Neymar Jr. <br> Born: 1992";
     event.target.style.opacity = "1";
+    $("#drop-article").fadeIn(400);
+    $("#droppable").css("border", "1px solid #aaaaaa")
+    $("#iframe3").fadeIn(1500);
+    $("#iframe3-title").fadeIn(1500);
   }
 });
+
+
+//Event Handler: Drag End when Draggable divs are Target
+//Executes when Dragged Elements are dropped on Drag Divs
+var $divDraggable1 = document.getElementById("draggable1");
+$divDraggable1.addEventListener("dragend", function(event) {
+  event.target.style.opacity = "1";
+  $("#drop-article").fadeOut(1200);
+  $("#droppable").css("border", "1px solid #aaaaaa")
+  $("#iframe1").fadeOut(1200);
+  $("#iframe1-title").fadeOut(1200);
+});
+
+var $divDraggable2 = document.getElementById("draggable2");
+$divDraggable2.addEventListener("dragend", function(event) {
+  event.target.style.opacity = "1";
+  $("#drop-article").fadeOut(1200);
+  $("#droppable").css("border", "1px solid #aaaaaa")
+  $("#iframe2").fadeOut(1200);
+  $("#iframe2-title").fadeOut(1200);  
+});
+
+var $divDraggable3 = document.getElementById("draggable3");
+$divDraggable3.addEventListener("dragend", function(event) {
+  event.target.style.opacity = "1";
+  $("#drop-article").fadeOut(1200);
+  $("#droppable").css("border", "1px solid #aaaaaa")
+  $("#iframe3").fadeOut(1200);
+  $("#iframe3-title").fadeOut(1200);
+});
+
+
+
+
+//Event Handler: Drag Start
+//Executes when the Drag Starts for both divs
+$divDraggable1.addEventListener("dragstart", function(event) {
+    event.target.style.opacity = "0.4";
+    document.getElementById("drop-article").innerHTML = "Please drop the selected element in the above container";
+    $("#drop-article").fadeIn(400);
+    $("#droppable").css("border", "2px dashed #ccc")
+});
+
+
+$divDraggable2.addEventListener("dragstart", function(event) {
+    event.target.style.opacity = "0.4";
+    document.getElementById("drop-article").innerHTML = "Please drop the selected element in the above container";
+    $("#drop-article").fadeIn(400);
+    $("#droppable").css("border", "2px dashed #ccc")
+});
+
+
+$divDraggable3.addEventListener("dragstart", function(event) {
+    event.target.style.opacity = "0.4";
+    document.getElementById("drop-article").innerHTML = "Please drop the selected element in the above container";
+    $("#drop-article").fadeIn(400);
+    $("#droppable").css("border", "2px dashed #ccc")
+});
+
+
+$divDroppable.addEventListener("dragstart", function(event) {
+    event.target.style.opacity = "0.4";
+    $("#droppable").css("border", "2px dashed #ccc")
+});
+
+
+
+
+
+
+
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img1 = document.getElementById('scorer-image1');
+var img2 = document.getElementById('scorer-image2');
+var img3 = document.getElementById('scorer-image3');
+
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img1.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+img2.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+img3.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementById("close");
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+
+
+/*
+
+    $('#overlay').click(function(e) {
+      e.preventDefault();
+      $('#overlay, #alertModalOuter').fadeOut(400, function() {
+      $('#close').remove();
+    });
+});
+
+*/

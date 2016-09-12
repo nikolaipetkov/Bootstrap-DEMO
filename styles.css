@@ -1,20 +1,8 @@
-<style>
 
 
 
 
-
-/* Ask Yulian about this********************************************************
-Ako tuk ne dobavq nqkakuv class a ostavq container-fluid kato purvi element ne se vzima predvid?
-vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavqm paddingi top i bottom .. overridevam neshto?
-*/
-.wrong {
-
-}
-
-
-
-
+/* NAVIGATION STYLES */
 .navbar {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -31,7 +19,7 @@ vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavq
 
 .navbar-brand > img {
   height: 50px;
-  margin-left: -20px;
+  margin-left: -190px;
   margin-top: -15px;
 }
 
@@ -46,17 +34,19 @@ vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavq
 /* PAGE 1 STYLES   */
 
 #info {
-  /*background-image: url("whatBG.jpg"); */
   background-image: url("assets/indexBG.jpg");
   background-size: 100% 100%;
-  height: 900px;
+  height: 1100px;
   color: white;
 }
 
 #header1-page1 {
-  margin-left: -90px;
+  margin-left: -200px;
 }
 
+#header2-page1 {
+  margin-left: -200px;
+}
 
 
 #droppable, .draggable {
@@ -74,12 +64,67 @@ vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavq
 
 }
 
+#drag1 {
+  height: 130px;
+  width: 280px;
+}
+
+#drag2 {
+  height: 130px;
+  width: 280px;
+}
+
+#drag3 {
+  height: 130px;
+  width: 280px;
+}
+
 
 #drop-article {
   text-align: center;
-  margin-left: 10px;
+  margin-left: -200px;
+  display: none;
 }
 
+
+
+#iframe-div {
+  margin-top: 50px;
+  height: 150px;
+  width: 50%;
+  margin-left: 190px;
+
+}
+
+#iframe1 {
+  display: none;
+  width: 400px;
+  height: 300px;
+}
+
+#iframe1-title {
+  display: none;
+}
+
+#iframe2 {
+  display: none;
+  width: 400px;
+  height: 300px;
+}
+
+#iframe2-title {
+  display: none;
+}
+
+#iframe3 {
+  display: none;
+  width: 400px;
+  height: 300px;
+}
+
+#iframe3-title {
+  display: none;
+}
 
 /* END PAGE 1 STYLES ------------------------------------------------ */
 
@@ -89,9 +134,10 @@ vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavq
 
 /* PAGE 2 STYLES         */
 
+/* MATCH CARD STYLES */
 #match {
   background-image: url("assets/whoBG.jpg");
-  height: 900px;  
+  height: 1100px;  
 }
 
 .thumbnail {
@@ -100,20 +146,33 @@ vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavq
 
 #progress-bar1 {
 
+  width: 65%;
   -webkit-transition: width 5.0s ease !important;
      -moz-transition: width 5.0s ease !important;
        -o-transition: width 5.0s ease !important;
           transition: width 5.0s ease !important;
 }
 
+#squad-pic {
+  width: 100%;
+}
+
+.card-info {
+  float: left;
+}
 
 #arrow1, #arrow2 {
     display: none;
     color: green;
+    float: right;
   }
 
+.percents {
+  float: right;
+}
 
 
+/* CAROUSEL STYLES */
 .article-img {
   width: 85%;
   height: 300px;
@@ -124,21 +183,9 @@ vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavq
   color: black;
 }
 
-/*
-#myCarousel img {
-  opacity: 0.5;
+#myCarousel {
+  display: none;
 }
-
-#myCarousel img:hover {
-  opacity: 1.0;
-}
-*/
-
-/*
-#squad-pic {
-  height: 70%;
-}
-*/
 
 
 .carousel-caption {
@@ -147,15 +194,15 @@ vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavq
 
 
 
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
       width: 70%;
       margin: auto;
   }
 
-  .carousel-inner > .item > img{
+.carousel-inner > .item > img{
        
-       height:528px;
+       height:588px;
      }
 
 
@@ -169,10 +216,15 @@ vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavq
 
 /* PAGE 3 STYLES                                                  */
 
+/* GOALSCORERS STYLES */
+.tables {
+  width: 100%;
+}
 
 #goalscorers {
   background-image: url("assets/bg-11-full.jpg");
-  height: 900px;
+  height: 1050px;
+  background-repeat: no-repeat;
   
 }
 
@@ -200,9 +252,11 @@ vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavq
           transition: all 1s ease;
 }
  
+
 .brighten img:hover {
   -webkit-filter: brightness(135%);
 }
+
 
 .blur img {
     -webkit-filter: blur(3px);
@@ -211,11 +265,93 @@ vsushtnost stava nqkakva koliziq s container fluid-a na bootstrap i az mu dobavq
   transition: .5s ease-in-out;
 }
 
+
 .blur img:hover {
   -webkit-filter: blur(0);
   filter: blur(0);
 }
 
+
+
+
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: 40px auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes zoom {
+    from {transform: scale(0.1)}
+    to {transform: scale(1)}
+}
+
+
+/* The Close Button */
+#close {
+    position: absolute;
+    top: 95px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#close:hover,
+#close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 
 /* END PAGE 3 STYLES --------------------------------------------- */
@@ -241,4 +377,3 @@ footer {
 
 /* END FOOTER STYLE ----------------------------------------------- */
 
-</style>
